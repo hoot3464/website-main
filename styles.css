@@ -1,0 +1,92 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+    background-color: rgba(3, 3, 153, 0.664);
+}
+.header img {
+    width: 150px;
+    height: auto;
+    margin-right: 20px;
+}
+.header h1 {
+    margin: 0;
+    font-size: 32px;
+    color: red;
+}
+.header h2 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+}
+.separator {
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 10px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    border-bottom: 2px solid #ccc;
+}
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+.nav li {
+    margin-right: 20px;
+}
+a {
+    color: #f1c40f;
+    font-weight: bold;
+    font-size: 28px;
+}
+a:hover {
+    color: #108741;
+}
+body {
+    background-color: #0c103d; /* Midnight blue background */
+    margin: 10px;
+    padding: 10px;
+}
+.footer_nav {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    color: #108741;
+    text-align: right;
+}
+a.footer_nav {
+    color: #f1c40f;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    text-align: right;
+}
+a.footer_nav:hover {
+    color: #108741;
+}
+hr {
+    border: 1px solid #ccc;
+    margin: 20px 0;
+    text-align: right;
+}
+@font-face {
+    font-family: 'FiraMono';
+    src: url('fonts/FiraMono.woff2') format('woff2'),
+         url('fonts/FiraMono.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+* {
+    font-family: 'FiraMono', monospace;
+    color: #fff;
+}
+code {
+    color:chartreuse
+}

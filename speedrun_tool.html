@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Goodness.fun</title>
+        <link rel="stylesheet" href="styles.css">
+    
+        <script src="header.js"></script>
+        </head> 
+
+<body>
+
+    <h1>Understanding the Speedrun Tool Calculation</h1>
+
+    <p>All credit goes to <a style="font-size: medium;" href="https://tools.blueshack.net/igtcalc/" target="_blank">this tool</a></p>
+    <p>This tool calculates the total time from input values representing minutes, seconds, and milliseconds. Below is a breakdown of how the calculation works:</p>
+
+    <div style="background-color: darkblue; color: white; padding: 20px; border-radius: 5px; font-family: monospace; white-space: pre-wrap;">
+        function calculateResult() {
+            total_m = 0;
+            total_s = 0;
+            total_ms = 0;
+            const inputElements = document.querySelectorAll('#input input');
+            inputElements.forEach(function (element) {
+                const value = parseInt(element.value);
+                if (!isNaN(value)) {
+                    switch (element.getAttribute('placeholder')) {
+                        case 'Min':
+                            total_m += value;
+                            break;
+                        case 'Sec':
+                            total_s += value;
+                            break;
+                        case 'MS':
+                            total_ms += value;
+                            break;
+                    }
+                }
+            });
+            total_s += Math.floor(total_ms / 1000);
+            total_ms = total_ms % 1000;
+            total_m += Math.floor(total_s / 60);
+            total_s = total_s % 60;
+            const outputText = `${total_m}m ${String(total_s).padStart(2, '0')}s ${String(total_ms).padStart(3, '0')}ms`;
+            document.querySelector('#output').textContent = outputText;
+        }
+      </div>
+
+        <h3>
+
+            <pre style="width:auto; margin-top: -4.8px; background-color:green;">
+            total_s += Math.floor(total_ms / 1000);
+            total_ms = total_ms % 1000;
+            total_m += Math.floor(total_s / 60);
+            total_s = total_s % 60;
+            </pre>
+
+            <ul>
+                <li><code>Math.floor</code> means adding up integers but not the remainder</li>
+                <li>ms are converted to sec, added to the total sec and remainder is left over</li>
+                <li>seconds are converted to min, added to total mins and remainder is left over</li>
+                <li><code>%</code> means <code>modulo operator</code> meaning to divide and return the remainder</li>
+            </ul>
+
+        </h3>
+
+        </div>
+        <br>
+
+        <div>
+        <h2 style="border-bottom: 3px solid #ccc; padding: 10px;">How Time is Calculated</h2>
+        <ol>
+            <li><strong>Input Collection:</strong> It collects all input elements from the HTML with the ID <code>input</code>. Each input is expected to have a placeholder indicating whether it represents minutes, seconds, or milliseconds.</li>
+            <li><strong>Value Parsing:</strong> For each input element, the function parses the value as an integer. If the value is a valid number, it adds it to the corresponding total based on the placeholder:
+                <ul>
+                    <li>If the placeholder is <code>Min</code>, the value is added to <code>total_m</code>.</li>
+                    <li>If the placeholder is <code>Sec</code>, the value is added to <code>total_s</code>.</li>
+                    <li>If the placeholder is <code>MS</code>, the value is added to <code>total_ms</code>.</li>
+                </ul>
+            </li>
+            <li><strong>Conversion of Milliseconds to Seconds:</strong> After collecting all values, the function converts milliseconds to seconds by dividing <code>total_ms</code> by 1000. The integer result is added to <code>total_s</code>, and the remainder (milliseconds that do not convert to a full second) is kept in <code>total_ms</code>.</li>
+            <li><strong>Conversion of Seconds to Minutes:</strong> Next, the function converts seconds to minutes in a similar manner. It divides <code>total_s</code> by 60, adding the integer result to <code>total_m</code>, and keeps the remainder in <code>total_s</code>.</li>
+            <li><strong>Output Formatting:</strong> Finally, the total time is formatted as a string showing minutes, seconds, and milliseconds, ensuring that seconds and milliseconds are displayed with leading zeros if necessary. This formatted string is then displayed in the HTML element with the ID <code>output</code>.</li>
+        </ol>
+        </div>
+</body>
+
+<footer>
+    <script src="footer.js"></script>
+</footer>
+
+</html>
