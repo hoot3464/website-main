@@ -6,22 +6,102 @@
     <title>About Me</title>
     <link rel="stylesheet" href="styles.css">
     <script src="header.js"></script>
-    </head>
-    
+
+    <style>
+        /* Image spoiler container */
+        .spoiler-image {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            width: 300px;
+        }
+
+        /* The black overlay that hides the image */
+        .spoiler-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #202225;
+            border-radius: 4px;
+            transition: opacity 0.25s ease;
+            z-index: 2;
+        }
+
+        /* When revealed, hide overlay */
+        .spoiler-image.revealed .spoiler-overlay {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        /* Optional blur effect on hidden image */
+        .spoiler-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            transition: filter 0.25s ease;
+            filter: blur(12px);
+        }
+
+        .spoiler-image.revealed img {
+            filter: none;
+        }
+
+        /* Links in navigation menu */
+        nav a {
+            font-size: 16px;
+        }
+
+        /* Links in text body */
+        p a {
+            font-size: 18px;
+        }
+    </style>
+
+</head>
+
 <body>
     <h1 style="color: white;">About Me</h1>
+
     <div style="display: flex; align-items: flex-start;">
-        <!-- Selfie image with hover enlargement positioned to the left -->
-        <img src="assets/selfie-smaller.jpg" alt="Selfie" style="width: 300px; height: auto; margin-right: 20px;">
-        <p style="color: white;">
-            I was born and raised in upstate South Carolina all my life. My birthday is July 10, 1996 and I am currently 28 years old. I graduated from high school with honors with a 4.27 GPA and went on to graduate from Clemson University in 2020 with a bachelor’s degree in Science in chemistry. I am a math and science nerd with a love for music, movies, video games, and computer technology in general. I am making this website to show off my skills, and to show the world my love for video games and technology, and really my love for fun too. 
 
-            You can check out my links on the top right. I have a Youtube channel but it’s nothing special… yet. Most of the videos there are simply speedrun videos for speedrun.com. But I do plan on making more full edited videos with my voice in them. It has been my dream for a long long time to be a Youtuber and make money from making content. But I know it’s not easy. And I always want to stick to making videos as my passion, not for money or views.
+        <!-- Spoiler Image -->
+        <div class="spoiler-image" id="selfieSpoiler">
+            <div class="spoiler-overlay"></div>
+            <img src="assets/selfie-smaller.jpg" alt="Selfie">
+        </div>
 
-            I also have a Github account but at the moment it isn't very active. I have a few projects on there that I have worked on in the past, but I am not currently working on anything except maintaining this site. This website has proven to be my most difficult project yet. But I plan to grow and evolve this site over time, so make sure to check back every once in a while.
-            
+        <p style="color: white; margin-left: 20px;">
+            If you want to read more, here's <a href="philosophy.html">deep philosophy that keeps me up at night.</a> <br><br>
+            I was born and raised in upstate South Carolina all my life. My birthday is in 1996. I graduated 
+            from high school with honors with a 4.27 GPA and went on to graduate from Clemson University in 2020 with a 
+            bachelor’s degree in Science in chemistry. I am a math and science nerd with a love for music, movies, video 
+            games, and computer technology in general. I am making this website to show off my skills, and to show the world 
+            my love for video games and technology, and really my love for fun too. <br><br>
+
+            You can check out my links on the top right. I have a Youtube channel but it’s nothing special… yet. Most of the 
+            videos there are simply speedrun videos for speedrun.com. But I do plan on making more full edited videos with my 
+            voice in them. It has been my dream for a long long time to be a Youtuber and make money from making content. 
+            But I know it’s not easy. And I always want to stick to making videos as my passion, not for money or views. <br><br>
+
+            I also have a Github account but at the moment it isn't very active. I have a few projects on there that I have 
+            worked on in the past, but I am not currently working on anything except maintaining this site. This website has 
+            proven to be my most difficult project yet. But I plan to grow and evolve this site over time, so make sure to 
+            check back every once in a while.
+        </p>
+
     </div>
+
+    <script>
+        // Toggle the image spoiler
+        document.getElementById("selfieSpoiler").addEventListener("click", function () {
+            this.classList.toggle("revealed");
+        });
+    </script>
+
 </body>
+
 <footer>
     <script src="footer.js"></script>
 </footer>

@@ -74,7 +74,7 @@
                 { href: "index.html", label: "Home" },
                 { href: "aboutme.html", label: "About Me" },
                 { href: "xg_hub.html", label: "Extreme G Hub" },
-                { href: "index.html", label: "Coding Portfolio" },
+                { href: "coding_portfolio.html", label: "Coding Portfolio" },
                 { href: "gallery.html", label: "Image Gallery" },
             ];
 

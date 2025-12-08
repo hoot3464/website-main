@@ -90,3 +90,79 @@ hr {
 code {
     color:chartreuse
 }
+/* --- Responsive Enhancements --- */
+@media (max-width: 900px) {
+    .header img {
+        width: 90px;
+        margin-right: 10px;
+    }
+    .header h1 {
+        font-size: 24px;
+    }
+    .header h2 {
+        font-size: 16px;
+    }
+    .nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .nav li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+    a {
+        font-size: 22px;
+    }
+    .footer_nav, a.footer_nav {
+        font-size: 16px;
+    }
+    body {
+        margin: 5px;
+        padding: 5px;
+    }
+}
+
+@media (max-width: 600px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 8px;
+    }
+    .header img {
+        width: 70px;
+        margin-right: 0;
+        margin-bottom: 8px;
+    }
+    .header h1 {
+        font-size: 18px;
+    }
+    .header h2 {
+        font-size: 14px;
+    }
+    .nav {
+        flex-direction: column;
+        padding: 6px;
+    }
+    .nav ul {
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav li {
+        margin: 0 0 8px 0;
+    }
+    a {
+        font-size: 18px;
+    }
+    .footer_nav, a.footer_nav {
+        font-size: 14px;
+        text-align: left;
+    }
+    body {
+        margin: 2px;
+        padding: 2px;
+    }
+    hr {
+        margin: 10px 0;
+    }
+}
+/* ...existing code... */
