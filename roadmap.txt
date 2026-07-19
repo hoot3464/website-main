@@ -1,0 +1,47 @@
+Goodness.fun: my personal website
+
+This project is my homemade, hand crafted website built using my limited skills in html, js, and css.
+It is a hub for my links to socials and github, and a place for me to show off my projects in github, Youtube, retro gaming, and fun.
+The project is ongoing, with ideas for more pages in the works and to finish pages I already made.
+The site looks good on desktop browser, as well as mobile if the device is in landscape mode.
+Site is not professionally made in any way, but I deeply care about how it looks and how it feels to browse, as well as the content on it.
+The biggest goals are to enjoy various forms of technology and show the world how much I enjoy it myself.
+
+
+PROJECT SYNOPSIS:
+- assets/: some pictures
+- FiraMono/: fonts for the site
+- styles.css: global styles used all around the site
+  - site is loosely themed around Deadpool, a favorite superhero of mine, appearing as the top logo
+  - blue background with white text, yellow links, and green when hovered
+- aboutme.html: a small static page with my portrait and a paragraph about me
+- codehome.html: a hub for talking about programming, and showing off finished and ongoing projects
+- gallery.html: uses gallery.js to show images in a gallery in assets/ with a Previous and Next button
+- if_youre_reading_this_i_love_you.html: secret
+- index.html: homepage, an essay on what the site is about
+- philosophy.html: will contain several thoughts of mine on things that deeply fascinate me about the world we live in
+  - two spoiler principle: all text is hidden, first item reveals a title or brief description, second item reveals the full text of it
+- speedrun_tool.html: educational page showing off the in-game calculator used in xg_hub, explaining some javascript that adds up times
+- xg_hub.html: shows off my love for Extreme-G for N64, and contains the speedrun tool with 12 spots
+  - enter in your best times on the 12 main tracks in the game, and the tool adds them up for you to get an IGT total
+- footer.js: builds the footer on every page, with small logo and links to home and back to top
+- gallery.js: code for referencing images in assets/ and switching them when buttons are pressed
+  - image gallery could be made for different sets of images later
+- header.js: builds consistent header on all pages. includes logo, my links, and nav menu to reach other pages
+- table.js: builds a table in xg_hub listing the 12 tracks in the game and my best times and youtube links to recordings of those best times
+- xg_script.js: for xg_hub, adds 4 buttons: add time, remove time, calculate, reset
+  - igt calculator is not my own, but credit is given
+
+
+WEBSITE GOALS:
+- currently the site is a disaster when viewed on portrait mode on mobile devices. site will need to look good on all devices in both portrait and landscape
+  - the horizontal nav menu will have to go. my current idea is to replace with a drop down menu.
+    - still all made in header.js, and expandable in case I add more pages that I want users to see.
+  - body text will need to somehow take up the width of the viewport in portrait so paragraphs read better
+- add a youtube projects page, talking about and showing off some yt videos and playlists i made
+- fill out philosophy.html with several entries. really easy to do, just mentally hard.
+- fill out codehome.html to be kind of its own index page, with links to other pages that won't be in the nav menu
+  - my finished and ongoing github projects
+  - becoming a power user of windows 11
+  - the deceptively easy process of installing and setting up arch linux without ever using archinstall
+  - installing and configuring neovim to become your own IDE, completely inside the terminal

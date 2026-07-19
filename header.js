@@ -45,6 +45,7 @@
                 { href: "https://www.github.com/hoot3464", label: "GitHub" },
                 { href: "https://steamcommunity.com/profiles/76561199512431802/", label: "Steam" },
                 { href: "https://www.twitch.tv/hoot_64", label: "Twitch" },
+                
             ];
 
             socials.forEach(function (social) {
@@ -74,7 +75,7 @@
                 { href: "index.html", label: "Home" },
                 { href: "aboutme.html", label: "About Me" },
                 { href: "xg_hub.html", label: "Extreme G Hub" },
-                { href: "coding_portfolio.html", label: "Coding Portfolio" },
+                { href: "codehome.html", label: "Codehome" },
                 { href: "gallery.html", label: "Image Gallery" },
             ];
 

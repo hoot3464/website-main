@@ -54,7 +54,7 @@ function createTable(titles, times) {
     const addLinks = table.insertRow();
     const ytLinksRow = table.insertRow();
     ytLinksRow.insertCell().appendChild(document.createTextNode("YT Links"));
-    
+
     const links = [
       "https://www.youtube.com/watch?v=1afgG-5C4jQ&list=PL3guWL9dpex0lcXDHEWC1pdDo-mKvyxTG&index=1&pp=gAQBiAQB",
       "https://www.youtube.com/watch?v=bz1oI8_cNQo&list=PL3guWL9dpex0lcXDHEWC1pdDo-mKvyxTG&index=2&pp=gAQBiAQB",
@@ -69,7 +69,7 @@ function createTable(titles, times) {
       "https://www.youtube.com/watch?v=URcIN4x76pE&list=PL3guWL9dpex0lcXDHEWC1pdDo-mKvyxTG&index=11&pp=gAQBiAQB",
       "https://www.youtube.com/watch?v=vqHj43cbrrw&list=PL3guWL9dpex0lcXDHEWC1pdDo-mKvyxTG&index=12&pp=gAQBiAQB"
     ];
-    
+
 
     const linkTexts = [
         "Video 1",
@@ -85,20 +85,19 @@ function createTable(titles, times) {
         "Video 11",
         "Video 12"
     ];
-    
+
     links.forEach((link, index) => {
       const ytLinkCell = ytLinksRow.insertCell();
       const ytLink = document.createElement('a');
       ytLink.href = link;
-      ytLink.textContent = linkTexts[index]; // Use the corresponding text for the link
-      ytLink.target = "_blank"; // Open link in a new tab
+      ytLink.textContent = linkTexts[index];
+      ytLink.target = "_blank";
       ytLinkCell.appendChild(ytLink);
-      // ytLinkCell.style.backgroundColor = (index % 2 === 0) ? "rgba(52, 98, 184, 0.77)" : "rgba(150, 164, 227, 0.6)";
       ytLinkCell.style.fontWeight = "bold";
-      ytLinkCell.style.textAlign = "center"; // Center text in this cell
-      ytLink.style.color = "#ffff00"; // Make links yellow
+      ytLinkCell.style.textAlign = "center";
+      ytLink.style.color = "#ffff00";
       ytLink.style.fontSize = "20px";
-      
+
       // Update hover effects: change link color to green on hover and back to yellow on mouseout
       ytLink.addEventListener("mouseover", function() {
         ytLink.style.color = "#108741"; // green on hover
@@ -107,7 +106,7 @@ function createTable(titles, times) {
         ytLink.style.color = "#ffff00"; // revert to yellow when not hovered
       });
     });
-    
+
     // Add border, center all text in the table, and add spacing (padding) to the table cells
     table.style.border = "2px solid white";
     table.style.borderCollapse = "collapse";
@@ -115,7 +114,7 @@ function createTable(titles, times) {
     cells.forEach(cell => {
       cell.style.border = "1px solid white";
       cell.style.textAlign = "center";
-      cell.style.padding = "10px"; // added padding for more spacing
+      cell.style.padding = "10px";
     });
 
     document.body.appendChild(table);

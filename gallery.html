@@ -4,24 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        .gallery-button {
+            font-size: 1.5em;
+            padding: 10px 20px;
+            margin: 0 10px;
+            color: black;
+            background: rgba(252, 251, 251, 0.76);
+            border: 1px solid rgba(0,0,0,0.12);
+            border-radius: 6px;
+            cursor: pointer;
+            transition: filter 120ms ease, background-color 120ms ease, transform 120ms ease;
+        }
+        .gallery-button:hover {
+            filter: brightness(0.8);
+            background: rgba(177, 177, 177, 0.751);
+            transform: translateY(-1px);
+        }
+        .gallery-button:active { transform: translateY(0); }
+    </style>
     <title>Image Gallery</title>
     <script src="header.js"></script>
 </head>
 
 <body>
     <script src="gallery.js"></script>
-    
+
     <div class="gallery">
         <br>
         <br>
+        <div class="controls" style="text-align: left; margin-top: 20px;">
+            <button class="gallery-button" onclick="prevImage()">Previous</button>
+            <button class="gallery-button" onclick="nextImage()">Next</button>
+        </div>
         <h1 class="description" id="imageDescription" style="text-align: left; font-size: 2em;">Extreme G 64 Grimace: Double Trouble</h1>
         <img id="galleryImage" src="assets/grimace_double.jpg" alt="Extreme G 64">
-        
-        <div class="controls" style="text-align: left; margin-top: 20px;">
-            <button style="font-size: 1.5em; padding: 10px 20px; margin: 0 10px; color: black;" onclick="prevImage()">Previous</button>
-            <button style="font-size: 1.5em; padding: 10px 20px; margin: 0 10px; color: black;" onclick="nextImage()">Next</button>
-        </div>
-        
+
+
     </div>
 
 </body>
