@@ -1,0 +1,1 @@
+This is my personal website project to be shown to the world. It is nowhere near finished yet but will be updated over time. Make sure to check back every so often to see what gets added.
