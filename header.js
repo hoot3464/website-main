@@ -39,12 +39,12 @@
             ul.style.listStyle = "none";
             ul.style.margin = "0";
             ul.style.padding = "0";
+          
 
             const socials = [
                 { href: "https://www.youtube.com/@hoot_645", label: "YouTube" },
                 { href: "https://www.github.com/hoot3464", label: "GitHub" },
                 { href: "https://steamcommunity.com/profiles/76561199512431802/", label: "Steam" },
-                { href: "https://www.twitch.tv/hoot_64", label: "Twitch" },
                 
             ];
 

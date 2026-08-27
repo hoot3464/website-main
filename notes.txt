@@ -1,0 +1,13 @@
+codehome.html: the roadmap
+
+general: include links to various sites and yt videos such as pewdiepie linux, fmhy.net
+
+windows: tips and tricks for windows 11 for customizing, productivity, enjoyment
+    include keybinds, registry tips, great apps and small tools i made
+
+arch linux: talk about the sway wm and my config
+    also my keybinds, why is minimalism so amazing
+    terminal tools, small scripts i wrote
+
+    for i in range(10):
+    print("hello world")

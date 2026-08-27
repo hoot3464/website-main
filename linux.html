@@ -1,0 +1,67 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Linux</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="header.js"></script>
+    <script src="copy.js"></script>
+
+    <style>
+    strong {
+        font-weight: bold;
+        color: #00ff6e;
+    }
+     body a {
+        font-size: 14px;
+    } 
+    .special-quote {
+        background-color: #21262d; 
+        color: #c9d1d9;
+        font-style: italic;
+        border: 1px solid #30363d;
+        border-radius: 6px;
+        padding: 10px 16px;
+        margin: 16px 0;
+        width: fit-content;
+    }
+    </style>
+
+</head>
+<body>
+
+    <blockquote class="special-quote">
+    I use Fedora, by the way.
+    </blockquote>
+    
+    <main>
+    
+        <!-- Side-by-Side Flex Section -->
+        <div style="display: flex; align-items: flex-start; gap: 24px; margin-bottom: 24px;">
+            
+            <div class="linux_image" id="linux_image" style="flex: 0 0 45%;">
+                <img src="assets/fedoralinux.png" alt="fastfetch fedora linux screenshot" style="width: 100%; height: auto; display: block; border-radius: 6px;"/>
+            </div>
+    
+            <div class="linux_text" style="flex: 1;">
+                <p style="margin-top: 0;">This image was taken from the terminal using the <strong>fastfetch</strong> program. Some interesting things to point out include the window manager which is <strong>Sway</strong>, and the terminal I'm using, which is <strong>ghostty</strong>.</p>
+                <p>My system is very minimal compared to what you may be used to if you use Windows a lot. In this page I'll describe my system in more detail and show you what makes it really great to me.</p>
+                <p>You can also see my setup uses two monitors. You definitely don't need multiple monitors to get ahead but for me it is wonderful (most of the time) and it will be relevant in things like setting sway workspaces and setting the sizes of floating windows and such. </p>
+                <p>The next thing to point out is the bottom where the cursor is. Mine looks this way because of Oh-My-Posh, a beautiful terminal prompt theme engine. You can choose from many themes and display all kinds of helpful information. Check it out <a href="https://ohmyposh.dev" target="_blank">here</a>.</p>
+                <p>The last thing to mention on this image is the Terminal Font, which is a Nerd Font. Nerd fonts are fantastic advanced fonts which include several icons that show up in terminal programs such as Oh-My-Posh, Yazi file manager, Neovim, and others.</p>
+            </div>
+    
+        </div>
+    
+        <p>(more info coming soon)</p>
+        
+    </main>
+    <br>
+    <hr class="separator">
+    <br>
+    <footer>
+    <script src="footer.js"></script>
+    </footer>
+
+</body>
+
+</html>
