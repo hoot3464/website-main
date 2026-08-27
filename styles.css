@@ -1,5 +1,10 @@
 /*Main CSS Styles*/
 
+:root {
+  --link-color: #00f0ff;
+  --link-hover-color: #39ff14;
+}
+
 * {
     font-family: 'FiraMono', monospace;
     color: #fff;
@@ -20,7 +25,7 @@ body {
 
 /* Base Link Styles */
 a {
-    color: #f1c40f;
+    color: var(--link-color);
     text-decoration: underline;
 }
 
@@ -28,7 +33,7 @@ a:hover,
 .header a:hover,
 .nav a:hover,
 a.footer_nav:hover {
-    color: #006f00;
+    color: var(--link-hover-color);
 }
 
 .separator {
@@ -52,7 +57,7 @@ a.footer_nav:hover {
     align-items: center;
     padding: 10px;
     border-bottom: 2px solid #ccc;
-    background-color: rgba(3, 3, 153, 0.664);
+    background-color: #2e2d2f;
 }
 .header img {
     width: 150px;
@@ -62,7 +67,7 @@ a.footer_nav:hover {
 .header h1 {
     margin: 0;
     font-size: 32px;
-    color: red;
+    color: #e00000;
 }
 .header h2 {
     margin: 0;
@@ -73,7 +78,6 @@ a.footer_nav:hover {
 
 .header a {
     font-size: 28px;
-    color:#f1c40f;
     font-weight: bold;
 }
 
@@ -96,7 +100,6 @@ a.footer_nav:hover {
 
 .nav a {
   display: inline-block;
-  color: #f1c40f;
   background-color: #161b22;
   border: 1px solid #30363d;
   border-radius: 4px;
