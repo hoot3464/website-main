@@ -14,6 +14,9 @@ jobs:
     steps:
       - name: Log Deployment and Trigger SwayNC
         run: |
-          echo "Deployment successul."
+          mkdir -p $HOME/commits
           echo "[$(date '+%Y-%m-%d %H:%M:%S')] Successful deployment to Hostinger" >> $HOME/commits/website_deployments.log
-          notify-send "Hostinger Deployment Live" "Website files synced successfully to goodness.fun" -i repository
+          
+          export DBUS_SESSION_BUS_ADDRESS="unix:path=/run/user/$(id -u)/bus"
+          export WAYLAND_DISPLAY="wayland-1"
+          notify-send "Hostinger Deployment Live" "Website files synced successfully to goodness.fun"
