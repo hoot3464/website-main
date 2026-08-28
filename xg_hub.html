@@ -4,18 +4,35 @@
         <title>Extreme G Hub</title>
         <link rel="stylesheet" href="styles.css">
         <script src="header.js"></script>
+
+        <style>
+        /* Make all number inputs equal width and height */
+        input[type="number"] {
+          width: 90px;
+          height: 32px;
+          box-sizing: border-box;
+          text-align: center;
+          padding: 2px 4px;
+        }
+
+        /* Hide native arrows so they fit uniformly */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+          margin: 0;
+        }
+        </style>
     </head>
-    
+
     <body>
     <br>
     <img src="assets/xg_title.png" alt="Extreme G Title" style="width: 400px;">
-    
-    <h1 style="color: red;">Extreme G Hub</h1>
-    
+
+    <h1 style="color: #f09116;">Extreme G Hub</h1>
+
     <p>Welcome to my personal Extreme G area! Here, you can explore my passion for the thrilling world of Extreme G racing. This site also features a handy speedrun tool designed to help you calculate and optimize your in-game times.</p>
 
 
-<h2 style="text-align: left; color: yellow; font-size: 30px;">Hoot's Fastest Times</h2>
+<h2 style="text-align: left; color: #f09116; font-size: 30px;">Hoot's Fastest Times</h2>
 <script src="table.js"></script>
 <br>
 
@@ -28,7 +45,7 @@
      <ol>
          <div id="input">
              <div>
-                 <li style="color: yellow;">
+                 <li style="color: white;">
                     <input style="background-color: black;" type="number" placeholder="Min" min="0">
                     <input style="background-color: black;" type="number" placeholder="Sec" min="0" max="59">
                     <input style="background-color: black;" type="number" placeholder="MS" min="0" max="999">
@@ -37,16 +54,17 @@
     </div>
 </ol>
 
-<h5 style="text-align: left; margin-left: 20px; color: yellow;"><a href="speedrun_tool.html">Speedrun Tool Explanation</a>
+<button style="margin-left: 20px; color: black;"id="buttonAdd">Add Time</button>
+<button style="margin-left: 20px; color: black;"id="buttonRemove">Remove Time</button>
+<button style="margin-left: 20px; color: black;"id="buttonCalc">Calculate</button>
+<button style="margin-left: 20px; color: black;"id="buttonReset">Reset</button>
+
+<h5><a href="speedrun_tool.html">Speedrun Tool Explanation</a>
 <br>
 <br>
 <a href="gallery.html" target="_blank" style="position: relative; margin-top: -50px;">Check out the Image Gallery!</a>
 </h5>
 </div>
-<button style="margin-left: 20px; color: black;" id="buttonAdd">Add Time</button>
-<button style="margin-left: 20px; color: black;"id="buttonRemove">Remove Time</button>
-<button style="margin-left: 20px; color: black;"id="buttonCalc">Calculate</button>
-<button style="margin-left: 20px; color: black;"id="buttonReset">Reset</button>
 
 <div id="output"></div>
 <br>

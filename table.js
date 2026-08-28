@@ -95,15 +95,15 @@ function createTable(titles, times) {
       ytLinkCell.appendChild(ytLink);
       ytLinkCell.style.fontWeight = "bold";
       ytLinkCell.style.textAlign = "center";
-      ytLink.style.color = "#ffff00";
-      ytLink.style.fontSize = "20px";
+      ytLink.style.color = "#00f0ff";
+      ytLink.style.fontSize = "14px";
 
       // Update hover effects: change link color to green on hover and back to yellow on mouseout
       ytLink.addEventListener("mouseover", function() {
-        ytLink.style.color = "#108741"; // green on hover
+        ytLink.style.color = "#39ff14"; // green on hover
       });
       ytLink.addEventListener("mouseout", function() {
-        ytLink.style.color = "#ffff00"; // revert to yellow when not hovered
+        ytLink.style.color = "#00f0ff"; // revert to yellow when not hovered
       });
     });
 

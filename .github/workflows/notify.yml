@@ -1,0 +1,19 @@
+name: Desktop Deployment Notification
+
+on:
+  workflow_run:
+    workflows: ["Deploy to Hostinger"]
+    types:
+      - completed
+
+jobs:
+  notify-local:
+    name: Send Local Notification
+    runs-on: self-hosted
+    if: ${{ github.actor == 'hoot3464' && github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - name: Log Deployment and Trigger SwayNC
+        run: |
+          echo "Deployment successul."
+          echo "[$(date '+%Y-%m-%d %H:%M:%S')] Successful deployment to Hostinger" >> $HOME/commits/website_deployments.log
+          notify-send "Hostinger Deployment Live" "Website files synced successfully to goodness.fun" -i repository

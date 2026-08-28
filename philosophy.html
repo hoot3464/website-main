@@ -23,26 +23,57 @@
         .spoiler::selection {
             background: none;
         }
+        /* Page Headings */
+        .page-title {
+          color: #ffffff;
+        }
+        
+        /* Gray Warning Box Container */
+        .code-block {
+          background-color: #22252a;
+          border: 1px solid #3a3f47;
+          border-radius: 6px;
+          padding: 16px 20px;
+          margin: 16px 0;
+          box-sizing: border-box;
+        }
+        
+        /* Reset default margins inside the card */
+        .code-block p {
+          margin: 0;
+          line-height: 1.5;
+        }
+        
+        /* Warning Header */
+        .warning-title {
+          color: #f09113;
+          font-weight: bold;
+          margin-bottom: 8px;
+        }
+        /* Body Text inside Box */
+        .warning-text {
+          color: #ffffff;
+          font-weight: normal;
+        }
     </style>
 </head>
 
 <body>
-    <h1 style="color: white;">Profound curiosities that keeps me up at night</h1>
-    <h2>(coming soon)</h2>
-    <br>
-    <p style="color: red; font-weight: bold;">⚠️ Warning.</p>
-    <p style="color: yellow; font-weight: bold;">
+    <h1 class="page-title">Profound curiosities that keeps me up at night</h1>
+    <h2 class="sub-title">(coming soon)</h2>
+    
+    <div class="code-block">
+      <p class="warning-title">⚠️ Warning.</p>
+      <p class="warning-text">
         The following text you are about to read contains deep philosophy, and some might be considered informational hazards. 
         This simply means you might be better off not knowing. If you are a curious mind like myself, you might find this fascinating 
         and enjoyable. Here are several things that blow my mind.
-    </p>
+      </p>
+    </div>
 
     <br>
 
     <ol style="color: white;">
-        <li>
-            <span class="spoiler">hidden text</span>
-        </li>
         <li>
             <span class="spoiler">hidden text</span>
         </li>
